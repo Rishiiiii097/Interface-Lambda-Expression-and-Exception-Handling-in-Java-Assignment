@@ -1,0 +1,63 @@
+1.what is an interface in java ?
+Ans:-In Java, an interface is a reference type that defines a set of abstract methods and constants. It serves as a blueprint for classes to implement, specifying what methods they must provide without specifying how they should be implemented. Interfaces allow for the definition of contracts that classes can adhere to, promoting code reusability, polymorphism, and loose coupling.
+2.which modifiers are allowed for method in an interface ?Explain with an example
+ans:-In an interface in Java, methods can have the following modifiers:
+
+public: All methods in an interface are implicitly public, even if the public modifier is not explicitly specified. This means that the methods are accessible from any other class that implements the interface.
+default: Starting from Java 8, interfaces can contain default methods, which are methods that provide a default implementation. Default methods are useful for adding new functionality to existing interfaces without breaking compatibility with existing implementations.
+static: Java 8 also introduced static methods in interfaces, which are methods that can be called directly on the interface itself, without requiring an instance of a class that implements the interface.
+example:-// Interface with methods having different modifiers
+public interface MyInterface {
+    // Public abstract method (implicitly)
+    void abstractMethod();
+
+    // Default method with a default implementation
+    default void defaultMethod() {
+        System.out.println("Default method implementation");
+    }
+
+    // Static method in interface
+    static void staticMethod() {
+        System.out.println("Static method in interface");
+    }
+}
+
+// Class implementing the interface
+public class MyClass implements MyInterface {
+    // Implementing the abstract method
+    @Override
+    public void abstractMethod() {
+        System.out.println("Implementing abstract method");
+    }
+
+    public static void main(String[] args) {
+        MyClass obj = new MyClass();
+        
+        // Calling abstract method
+        obj.abstractMethod();
+
+        // Calling default method
+        obj.defaultMethod();
+
+        // Calling static method
+        MyInterface.staticMethod();
+    }
+}
+
+3.What is the use of interface in java?
+Ans:-Interfaces in Java serve several important purposes, making them a fundamental part of the language. Here are some key uses of interfaces in Java:
+
+Abstraction: Interfaces allow you to define a contract for behavior without specifying the implementation details. By declaring methods in an interface, you can abstract away the specifics of how those methods are implemented, focusing instead on what functionality is expected.
+Polymorphism: Interfaces facilitate polymorphism, which is the ability of objects of different classes to be treated as objects of a common superclass. Since multiple classes can implement the same interface, objects of these classes can be referenced using the interface type, allowing for more flexible and modular code.
+4.what is the difference between abstract class and interface in java?
+Ans:- Abstract classes and interfaces are both mechanisms for achieving abstraction in Java, but they have some key differences in their characteristics and usage:
+
+Method Implementation:
+Abstract Class: Can contain both abstract (methods without a body) and non-abstract (concrete) methods. Abstract methods are declared using the abstract keyword and must be implemented by subclasses.
+Interface: Can only contain abstract methods (methods without a body) and constants (public, static, final fields). All methods in an interface are implicitly abstract and must be implemented by classes that implement the interface.
+Multiple Inheritance:
+Abstract Class: Supports single inheritance, meaning a class can extend only one abstract class. However, it can implement multiple interfaces.
+Interface: Supports multiple inheritance, meaning a class can implement multiple interfaces. Interfaces cannot implement other interfaces but can extend multiple other interfaces.
+Constructor:
+Abstract Class: Can have constructors, which are used to initialize the state of the abstract class and its subclasses.
+Interface: Cannot have constructors because interfaces do not have instances or state. They define contracts for behavior rather than representing concrete implementations.

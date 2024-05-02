@@ -1,0 +1,22 @@
+1.what is the lambda expression of java8?
+Ans:-In Java 8, lambda expressions introduce a concise way to represent anonymous functions. Lambda expressions enable you to treat functionality as a method argument, or to create a method local to a method's implementation. They provide a way to pass functions as arguments to other functions,
+2.can you  pass lambda expression to a method?when?
+Ans:-Yes, you can pass lambda expressions as arguments to methods in Java. This capability is particularly useful when you need to pass behavior (functionality) as a parameter to a method.
+1.Functional Interfaces: When a method expects an instance of a functional interface (an interface with only one abstract method), you can pass a lambda expression that provides the implementation of that method.
+3.what is the functional interface in java8?
+Ans:-In Java 8, a functional interface is an interface that contains exactly one abstract method. Functional interfaces are also known as SAM (Single Abstract Method) interfaces. While a functional interface can have multiple default or static methods, it must have only one abstract method to be considered a functional interface.
+Functional interfaces play a crucial role in enabling the use of lambda expressions and method references in Java 8. Lambda expressions provide a concise way to represent anonymous functions, and they can be used to provide implementations for the abstract method of a functional interface
+The java.util.function package in Java 8 provides a set of predefined functional interfaces for common functional programming scenarios.
+4.why do we use lambda expression in java? 
+ANs:-
+Lambda expressions in Java provide several benefits, which contribute to more concise, readable, and expressive code. Here are some reasons why lambda expressions are used in Java:
+Concise Syntax: Lambda expressions allow you to express anonymous functions concisely, reducing boilerplate code. They enable you to write more compact code compared to traditional anonymous inner classes.
+Improved Readability: Lambda expressions make code more readable by focusing on the behavior being passed rather than the mechanics of implementing interfaces or classes. This can lead to code that is easier to understand and maintain.
+Functional Programming Paradigm: Lambda expressions enable a more functional programming style in Java. They allow you to treat functions as first-class citizens, enabling higher-order functions, function composition, and other functional programming techniques.
+Flexibility and Expressiveness: Lambda expressions provide flexibility in expressing behavior as method arguments. They allow you to pass behavior as parameters to methods, which can lead to more expressive and flexible APIs.
+Reduced Code Complexity: Lambda expressions can simplify code by eliminating the need for explicit anonymous inner class declarations. They help reduce the overall complexity of code, making it easier to comprehend and maintain.
+Concurrency and Parallelism: Lambda expressions are commonly used in conjunction with the Java Stream API for processing collections in a declarative and parallelizable manner. They facilitate parallel execution of operations on collections, leading to improved performance in multi-core environments.
+Event Handling and Callbacks: Lambda expressions are often used for event handling and callbacks in graphical user interfaces (GUIs), web applications, and other event-driven systems. They provide a concise syntax for defining event handlers and callbacks inline.
+Overall, lambda expressions in Java enhance code clarity, expressiveness, and flexibility, while promoting a more functional and declarative style of programming. They are a powerful feature introduced in Java 8 that significantly improves the language's capabilities for modern software development.
+5.Is it mandatory for lambda have parameters?
+ANs:-No, lambda expressions in Java do not necessarily have to have parameters. Depending on the context in which they are used, lambda expressions can have zero or more parameters. The syntax for lambda expressions allows for flexibility in specifying parameters.
